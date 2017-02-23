@@ -177,6 +177,11 @@ RE.insertImage = function(url, alt) {
     RE.insertHTML(html);
 }
 
+RE.insertImage = function(url, alt, width, height) {
+    var html = '<img style="display:block;width:' + width +  ';height:' + height + ';"  src="' + url + '" alt="' + alt + '" />';
+    RE.insertHTML(html);
+}
+
 RE.insertHTML = function(html) {
     RE.restorerange();
     document.execCommand('insertHTML', false, html);
