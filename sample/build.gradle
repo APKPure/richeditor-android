@@ -1,24 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion COMPILE_SDK_VERSION as int
-  buildToolsVersion BUILD_TOOLS_VERSION
+  compileSdkVersion 25
+  buildToolsVersion '25.0.2'
 
   defaultConfig {
-    minSdkVersion MIN_SDK_VERSION as int
-    targetSdkVersion TARGET_SDK_VERSION as int
-    versionCode VERSION_CODE as int
-    versionName VERSION_NAME
+    minSdkVersion 11
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0.0"
   }
 
-  signingConfigs {
-    release {
-      storeFile file(keyStoreProperty)
-      keyAlias keyAliasProperty
-      storePassword keyStorePasswordProperty
-      keyPassword keyAliasPasswordProperty
-    }
-  }
 
   buildTypes {
     debug {
@@ -26,30 +18,11 @@ android {
       zipAlignEnabled true
     }
     release {
-      debuggable false
-      zipAlignEnabled true
-      signingConfig signingConfigs.release
+
     }
   }
 }
-
-def getKeyStoreProperty() {
-  return hasProperty('WASABEEF_KEYSTORE') ? WASABEEF_KEYSTORE : "debug.keystore"
-}
-
-def getKeyAliasProperty() {
-  return hasProperty('WASABEEF_KEYALIAS') ? WASABEEF_KEYALIAS : "android"
-}
-
-def getKeyStorePasswordProperty() {
-  return hasProperty('WASABEEF_KEYSTOREPASSWORD') ? WASABEEF_KEYSTOREPASSWORD : "androiddebugkey"
-}
-
-def getKeyAliasPasswordProperty() {
-  return hasProperty('WASABEEF_KEYALIASPASSWORD') ? WASABEEF_KEYALIASPASSWORD : "android"
-}
-
-dependencies {
+ dependencies {
   compile project(':richeditor')
-  compile "com.android.support:appcompat-v7:${SUPPORT_PACKAGE_VERSION}"
+  compile "com.android.support:appcompat-v7:25.1.0"
 }
