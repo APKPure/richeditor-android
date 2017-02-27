@@ -440,8 +440,14 @@ public class RichEditor extends WebView {
             return super.shouldOverrideUrlLoading(view, url);
         }
     }
+
     public void lineFeed() {
         exec("javascript:RE.prepareInsert();");
         exec("javascript:RE.insertHTML('<br>');");
+    }
+
+    public void insertHTML(String html) {
+        exec("javascript:RE.prepareInsert();");
+        exec("javascript:RE.insertHTML('" + html + "');");
     }
 }
