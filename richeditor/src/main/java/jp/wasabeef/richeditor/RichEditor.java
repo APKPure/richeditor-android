@@ -450,4 +450,9 @@ public class RichEditor extends WebView {
         exec("javascript:RE.prepareInsert();");
         exec("javascript:RE.insertHTML('" + html + "');");
     }
+
+    public void insertVideo(String title, String url, String duration) {
+        insertHTML("<span class=\"tube\" data-url=\"" + url + "\">" + title + "<u>" + duration + "</u></span><br>");
+        //insertHTML("<font class=\"tube\" data-url=\"https://www.youtube.com/watch?v=mY6rTSBIHGI\">视频标题</font>");
+    }
 }

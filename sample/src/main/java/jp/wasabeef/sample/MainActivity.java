@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import jp.wasabeef.richeditor.RichEditor;
 
@@ -213,9 +214,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.action_insert_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mEditor.insertImage("http://www.1honeywan.com/dachshund/image/7.21/7.21_3_thumb.JPG",
+                /*mEditor.insertImage("http://www.1honeywan.com/dachshund/image/7.21/7.21_3_thumb.JPG",
                         "", "", "");
-                mEditor.lineFeed();
+                mEditor.lineFeed();*/
+                Toast.makeText(MainActivity.this,"onclik",Toast.LENGTH_SHORT).show();
+                mEditor.insertVideo("视频标题","https://www.youtube.com/watch?v=mY6rTSBIHGI","2.30");
             }
         });
 
