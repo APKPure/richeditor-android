@@ -452,7 +452,8 @@ public class RichEditor extends WebView {
     }
 
     public void insertVideo(String title, String url, String duration) {
-        insertHTML("<span class=\"tube\" data-url=\"" + url + "\">" + title + "<u>" + duration + "</u></span><br>");
+        //insertHTML("<span class=\"tube\" data-url=\"" + url + "\">" + title + "<u>" + duration + "</u></span><br>");
         //insertHTML("<font class=\"tube\" data-url=\"https://www.youtube.com/watch?v=mY6rTSBIHGI\">视频标题</font>");
+        insertHTML("<input style=\"color:red;border:1px solid red;font-size:14px;background:#fff;padding:5px; \" type=\"button\" data-url=\"" + url + "\" value=\"&#9654; " + title + " " + duration + "\" readonly=\"readonly\" />");
     }
 }
