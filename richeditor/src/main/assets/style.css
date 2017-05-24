@@ -45,29 +45,3 @@ body {
   content: attr(placeholder);
   opacity: .5;
 }}
-
-/*.tube{
-    position: relative;
-    background: #fff;
-    border: 1px solid #D4101F;
-    font-size: 14px;
-    padding-right: 5px;
-    display: inline-block;
-    }
-
-.tube::before {
-    content: '\25B6';
-    color: #fff;
-    padding: 0 10px;
-    margin-right: 5px;
-    background: #D4101F;
-    }
-
-.tube u{
-    text-decoration:none;
-    color:#D4101F;
-    padding: 0 5px;
-    }*/
-.tube{ position: relative; background: #fff; border: 1px solid #D4101F; font-size: 14px;padding-right: 5px; display: block; }
-.tube::before { content: '\25B6';color: #fff;padding: 0 10px;margin-right: 5px;background: #D4101F;}
-.tube u{ text-decoration:none; color:#D4101F; padding: 0 5px; }
