@@ -217,7 +217,8 @@ public class MainActivity extends AppCompatActivity {
                 /*mEditor.insertImage("http://www.1honeywan.com/dachshund/image/7.21/7.21_3_thumb.JPG",
                         "", "", "");
                 mEditor.lineFeed();*/
-                mEditor.insertVideo("视频标题","https://www.youtube.com/watch?v=mY6rTSBIHGI","2.30");
+                mEditor.insertImage("http://www.weimeifan.net/wp-content/uploads/2017/05/4b21cf96d4cf612f239a6c322b10c8fe-4.jpg","");
+                //mEditor.insertVideo("视频标题","https://www.youtube.com/watch?v=mY6rTSBIHGI","2.30");
             }
         });
 
