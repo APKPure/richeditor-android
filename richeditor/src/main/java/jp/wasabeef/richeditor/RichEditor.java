@@ -421,11 +421,15 @@ public class RichEditor extends WebView {
         }
 
         @Override public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            String decode;
+            String decode = url;
             try {
-                decode = URLDecoder.decode(url, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                // No handling
+                int startIndex = TextUtils.indexOf(decode, CALLBACK_SCHEME);
+                if (startIndex != -1) {
+                    decode = TextUtils.substring(decode, startIndex, decode.length()).replaceAll("\\+", "[add]");
+                }
+                decode = URLDecoder.decode(decode, "UTF-8");
+                decode = decode.replace("[add]", "+");
+            } catch (Exception e) {
                 return false;
             }
 
